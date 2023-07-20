@@ -38,8 +38,8 @@ class ProductDescription extends StatelessWidget {
                   ? const Color(0xFFFFE6E6)
                   : const Color(0xFFF5F6F9),
               borderRadius: const BorderRadius.only(
-                topLeft: const Radius.circular(20),
-                bottomLeft: const Radius.circular(20),
+                topLeft: Radius.circular(20),
+                bottomLeft: Radius.circular(20),
               ),
             ),
             child: SvgPicture.asset(
@@ -69,14 +69,14 @@ class ProductDescription extends StatelessWidget {
           child: GestureDetector(
             onTap: () {},
             child: Row(
-              children: [
-                const Text(
+              children: const [
+                Text(
                   "See More Detail",
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontWeight: FontWeight.w600, color: kPrimaryColor),
                 ),
-                const SizedBox(width: 5),
-                const Icon(
+                SizedBox(width: 5),
+                Icon(
                   Icons.arrow_forward_ios,
                   size: 12,
                   color: kPrimaryColor,

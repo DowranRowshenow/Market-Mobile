@@ -12,7 +12,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
-      body: Body(),
+      body: const Body(),
       bottomNavigationBar: const CheckoutCard(),
     );
   }
@@ -23,7 +23,7 @@ class CartScreen extends StatelessWidget {
         children: [
           const Text(
             "Your Cart",
-            style: const TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black),
           ),
           Text(
             "${demoCarts.length} items",
