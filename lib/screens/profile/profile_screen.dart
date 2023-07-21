@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:market/components/back_icon_button.dart';
 import 'package:market/components/coustom_bottom_nav_bar.dart';
 import 'package:market/enums.dart';
 
@@ -13,6 +14,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Profile"),
+        leading: const BackIconButton(),
       ),
       body: const Body(),
       bottomNavigationBar:

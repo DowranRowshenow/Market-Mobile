@@ -15,16 +15,8 @@ class HomeScreen extends StatelessWidget {
     // You have to call it on your starting screen
     SizeConfig().init(context);
 
-    bool _pinned = true;
-    bool _snap = false;
-    bool _floating = false;
-
-    return Scaffold(
-      body: CustomScrollView(
-        slivers: <Widget>[
-          const Body(),
-        ],
-      ),
+    return const Scaffold(
+      body: Body(),
       bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }

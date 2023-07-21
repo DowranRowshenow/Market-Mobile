@@ -1,6 +1,6 @@
 // ignore_for_file: file_names
 
-import 'Product.dart';
+import 'Productcopy.dart';
 
 class Cart {
   final Product product;

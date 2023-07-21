@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:market/screens/search/search_screen.dart';
 
-import '../../../constants.dart';
-import '../../../size_config.dart';
+import '../constants.dart';
+import '../size_config.dart';
+import '../variables.dart';
 
 class SearchField extends StatelessWidget {
   const SearchField({
@@ -18,6 +19,7 @@ class SearchField extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: TextField(
+        controller: searchController,
         onChanged: (value) {},
         onTap: () => Navigator.pushNamed(context, SearchScreen.routeName),
         decoration: InputDecoration(

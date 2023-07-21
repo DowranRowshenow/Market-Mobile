@@ -7,7 +7,7 @@ class Storage {
     await sharedPreferences.setString('phone', phone);
   }
 
-static Future<void> createPrefsAsGuest() async {
+  static Future<void> createPrefsAsGuest() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     await sharedPreferences.setBool('isGuest', true);
   }
