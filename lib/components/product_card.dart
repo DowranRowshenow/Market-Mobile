@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:market/components/ripple_container.dart';
 import 'package:market/models/Product.dart';
 import 'package:market/screens/details/details_screen.dart';
 
@@ -23,7 +24,10 @@ class ProductCard extends StatelessWidget {
       padding: EdgeInsets.only(left: getProportionateScreenWidth(20)),
       child: SizedBox(
         width: getProportionateScreenWidth(width),
-        child: GestureDetector(
+        child: RippleContainer(
+          padding: EdgeInsets.all(getProportionateScreenWidth(10)),
+          color: kSecondaryColor.withOpacity(0.1),
+          borderRadius: 5,
           onTap: () => Navigator.pushNamed(
             context,
             DetailsScreen.routeName,
@@ -35,10 +39,9 @@ class ProductCard extends StatelessWidget {
               AspectRatio(
                 aspectRatio: 1.02,
                 child: Container(
-                  padding: EdgeInsets.all(getProportionateScreenWidth(20)),
                   decoration: BoxDecoration(
-                    color: kSecondaryColor.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(5),
                   ),
                   child: Hero(
                     tag: product.id.toString(),
@@ -85,7 +88,7 @@ class ProductCard extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),

@@ -7,7 +7,6 @@ import 'package:market/screens/home/home_screen.dart';
 import 'package:market/storage.dart';
 import 'package:market/theme.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Storage.loadUser();
@@ -22,7 +21,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
     ]);
 
     return MaterialApp(

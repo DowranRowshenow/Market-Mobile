@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:market/components/back_icon_button.dart';
 import 'package:market/models/Cart.dart';
 
 import 'components/body.dart';
@@ -19,6 +20,7 @@ class CartScreen extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
+      leading: const BackIconButton(),
       title: Column(
         children: [
           const Text(

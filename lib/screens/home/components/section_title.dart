@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../size_config.dart';
 
@@ -26,9 +27,18 @@ class SectionTitle extends StatelessWidget {
         ),
         GestureDetector(
           onTap: press,
-          child: const Text(
-            "See More",
-            style: TextStyle(color: Color(0xFFBBBBBB)),
+          child: Row(
+            children: [
+              const Text(
+                "See More ",
+                style: TextStyle(color: Colors.grey),
+              ),
+              SvgPicture.asset(
+                "assets/icons/arrow_right.svg",
+                color: Colors.grey,
+                width: 6,
+              ),
+            ],
           ),
         ),
       ],
