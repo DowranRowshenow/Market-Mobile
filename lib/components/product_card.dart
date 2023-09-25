@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market/components/ripple_container.dart';
 import 'package:market/models/Product.dart';
 import 'package:market/screens/details/details_screen.dart';
+import 'package:skeletons/skeletons.dart';
 
 import '../constants.dart';
 import '../size_config.dart';
@@ -45,7 +46,24 @@ class ProductCard extends StatelessWidget {
                   ),
                   child: Hero(
                     tag: product.id.toString(),
-                    child: Image.network(product.images[0].url),
+                    child: Image.network(
+                      product.images[0].url,
+                      loadingBuilder: (context, child, loadingProgress) {
+                        if (loadingProgress == null) {
+                          return child;
+                        }
+                        return Skeleton(
+                          isLoading: true,
+                          skeleton: const SkeletonAvatar(
+                            style: SkeletonAvatarStyle(
+                              width: double.infinity,
+                              height: double.infinity,
+                            ),
+                          ),
+                          child: child,
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),

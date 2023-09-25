@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:market/components/back_icon_button.dart';
 import 'package:market/components/coustom_bottom_nav_bar.dart';
 import 'package:market/enums.dart';
 
+import '../../constants.dart';
+import '../../size_config.dart';
 import 'components/body.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -13,8 +14,16 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Profile"),
-        leading: const BackIconButton(),
+        leading: Container(),
+        title: Text(
+          "PROFILE",
+          style: TextStyle(
+            fontSize: getProportionateScreenWidth(36),
+            color: kPrimaryColor,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
       ),
       body: const Body(),
       bottomNavigationBar:

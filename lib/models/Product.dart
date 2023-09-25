@@ -1,52 +1,63 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:market/server/server.dart';
-
+import 'package:market/server.dart';
 
 class ProductBrand {
   final String name;
 
-  ProductBrand({required this.name,});
+  ProductBrand({
+    required this.name,
+  });
 
   factory ProductBrand.fromJson(Map<String, dynamic> json) {
-    return ProductBrand(name: json['name'],);
+    return ProductBrand(
+      name: json['name'],
+    );
   }
 }
-
 
 class ProductCategory {
   final String name;
 
-  ProductCategory({required this.name,});
+  ProductCategory({
+    required this.name,
+  });
 
   factory ProductCategory.fromJson(Map<String, dynamic> json) {
-    return ProductCategory(name: json['name'],);
+    return ProductCategory(
+      name: json['name'],
+    );
   }
 }
-
 
 class ProductImage {
   final String url;
 
-  ProductImage({required this.url,});
+  ProductImage({
+    required this.url,
+  });
 
   factory ProductImage.fromJson(Map<String, dynamic> json) {
-    return ProductImage(url: 'http://${Server.host}${json['image']}',);
+    return ProductImage(
+      url: 'http://${Server.host}${json['image']}',
+    );
   }
 }
 
-
-class ProductSize{
+class ProductSize {
   final int size;
 
-  ProductSize({required this.size,});
+  ProductSize({
+    required this.size,
+  });
 
   factory ProductSize.fromJson(Map<String, dynamic> json) {
-    return ProductSize(size: json['size'],);
+    return ProductSize(
+      size: json['size'],
+    );
   }
 }
-
 
 class ProductColor {
   final String name;
@@ -56,17 +67,22 @@ class ProductColor {
 
   factory ProductColor.fromJson(Map<String, dynamic> json) {
     String name = json['name'] ?? 'Black';
-    Color color = name == "Black" ? Colors.black 
-    : name == "White" ? Colors.white
-    : name == "Grey" ? Colors.grey
-    : name == "Red" ? Colors.red
-    : name == "Yellow" ? Colors.yellow
-    : name == "Green" ? Colors.green
-    : Colors.black;
+    Color color = name == "Black"
+        ? Colors.black
+        : name == "White"
+            ? Colors.white
+            : name == "Grey"
+                ? Colors.grey
+                : name == "Red"
+                    ? Colors.red
+                    : name == "Yellow"
+                        ? Colors.yellow
+                        : name == "Green"
+                            ? Colors.green
+                            : Colors.black;
     return ProductColor(name: name, color: color);
   }
 }
-
 
 class Product {
   final int id;
@@ -96,7 +112,6 @@ class Product {
     required this.images,
     required this.colors,
     required this.sizes,
-
     this.isFavourite = true,
     this.isPopular = true,
     this.rating = 4.5,

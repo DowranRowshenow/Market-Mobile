@@ -11,12 +11,17 @@ class Server {
   }
 
   static Future<List<Product>> getProducts({
-    String name = '', category = '', barcode = '',
-    List<String> colors = const [], brands = const [],
+    String name = '',
+    category = '',
+    barcode = '',
+    List<String> colors = const [],
+    brands = const [],
     // Check if server really needs a string variable
     List<String> sizes = const [],
-    String priceMin = '', priceMax = '',
-    String quantity = '', limit = '',
+    String priceMin = '',
+    priceMax = '',
+    String quantity = '',
+    limit = '',
   }) async {
     final Map<String, String> queryParams = {
       'format': 'json',
@@ -29,7 +34,7 @@ class Server {
       'limit': limit,
     };
     final http.Response response = await http.get(
-    Uri.http(host, '/api/products/', queryParams),
+      Uri.http(host, '/api/products/', queryParams),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
