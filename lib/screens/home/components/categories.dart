@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:market/constants.dart';
 
 import '../../../size_config.dart';
 
@@ -16,7 +17,7 @@ class Categories extends StatelessWidget {
       {"icon": "assets/icons/Discover.svg", "text": "More"},
     ];
     return Padding(
-      padding: EdgeInsets.all(getProportionateScreenWidth(20)),
+      padding: EdgeInsets.symmetric(vertical: getProportionateScreenWidth(10)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +59,7 @@ class CategoryCard extends StatelessWidget {
               width: getProportionateScreenWidth(55),
               decoration: BoxDecoration(
                 color: const Color(0xFFFFECDF),
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(borderRadius),
               ),
               child: SvgPicture.asset(icon!),
             ),

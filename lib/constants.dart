@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:market/size_config.dart';
 
+// INTEGERS AND DOUBLES
+const double borderRadius = 7;
+
+// CONTROLLERS
+final searchController = TextEditingController();
+
+// COLORS
 const kPrimaryColor = Color(0xFFFF7643);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(

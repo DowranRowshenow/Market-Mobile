@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../size_config.dart';
 import 'categories.dart';
 import 'discount_banner.dart';
-import 'home_header.dart';
 import 'popular_product.dart';
 import 'special_offers.dart';
 
@@ -12,19 +11,17 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return Container(
+      padding:
+          EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: getProportionateScreenHeight(20)),
-            const HomeHeader(),
-            SizedBox(height: getProportionateScreenWidth(10)),
             const DiscountBanner(),
             const Categories(),
             const SpecialOffers(),
-            SizedBox(height: getProportionateScreenWidth(30)),
             const PopularProducts(),
-            SizedBox(height: getProportionateScreenWidth(20)),
+            SizedBox(height: getProportionateScreenWidth(10)),
           ],
         ),
       ),

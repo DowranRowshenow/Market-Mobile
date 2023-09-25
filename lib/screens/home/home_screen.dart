@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market/components/coustom_bottom_nav_bar.dart';
 import 'package:market/enums.dart';
+import 'package:market/screens/home/components/home_header.dart';
 import 'package:market/size_config.dart';
 
 import 'components/body.dart';
@@ -15,9 +16,17 @@ class HomeScreen extends StatelessWidget {
     // You have to call it on your starting screen
     SizeConfig().init(context);
 
-    return const Scaffold(
-      body: Body(),
-      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: getProportionateScreenHeight(70),
+        leadingWidth: 0,
+        automaticallyImplyLeading: false,
+        title: const HomeHeader(),
+        actions: const [],
+      ),
+      body: const Body(),
+      bottomNavigationBar:
+          const CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
 }
@@ -30,14 +39,7 @@ class SilverAppBar extends AppBar {
       title: const Text("Silver App Bar"),
       backgroundColor: Colors.grey,
       elevation: 0.0,
-      actions: [
-        IconButton(
-          icon: const Icon(Icons.search),
-          onPressed: () {
-            // Do something
-          },
-        ),
-      ],
+      leading: Container(),
     );
   }
 }

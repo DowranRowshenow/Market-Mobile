@@ -22,13 +22,13 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: getProportionateScreenWidth(20)),
+      padding: EdgeInsets.only(left: getProportionateScreenWidth(10)),
       child: SizedBox(
-        width: getProportionateScreenWidth(width),
+        width: getProportionateScreenWidth(getProportionateScreenWidth(147)),
         child: RippleContainer(
           padding: EdgeInsets.all(getProportionateScreenWidth(10)),
           color: kSecondaryColor.withOpacity(0.1),
-          borderRadius: 5,
+          borderRadius: borderRadius,
           onTap: () => Navigator.pushNamed(
             context,
             DetailsScreen.routeName,

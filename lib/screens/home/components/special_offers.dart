@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:market/constants.dart';
 
 import '../../../size_config.dart';
 import 'section_title.dart';
@@ -12,15 +13,11 @@ class SpecialOffers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: SectionTitle(
-            title: "Categories",
-            press: () {},
-          ),
+        SectionTitle(
+          title: "Categories",
+          press: () {},
         ),
-        SizedBox(height: getProportionateScreenWidth(20)),
+        SizedBox(height: getProportionateScreenWidth(10)),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -31,16 +28,17 @@ class SpecialOffers extends StatelessWidget {
                 numOfBrands: 18,
                 press: () {},
               ),
+              SizedBox(width: getProportionateScreenWidth(20)),
               SpecialOfferCard(
                 image: "assets/images/Image Banner 3.png",
                 category: "Fashion",
                 numOfBrands: 24,
                 press: () {},
               ),
-              SizedBox(width: getProportionateScreenWidth(20)),
             ],
           ),
         ),
+        SizedBox(height: getProportionateScreenWidth(10)),
       ],
     );
   }
@@ -62,14 +60,14 @@ class SpecialOfferCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: getProportionateScreenWidth(20)),
+      padding: EdgeInsets.only(left: getProportionateScreenWidth(0)),
       child: GestureDetector(
         onTap: press,
         child: SizedBox(
           width: getProportionateScreenWidth(242),
           height: getProportionateScreenWidth(100),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(borderRadius),
             child: Stack(
               children: [
                 Image.asset(

@@ -3,7 +3,6 @@ import 'package:market/screens/search/search_screen.dart';
 
 import '../constants.dart';
 import '../size_config.dart';
-import '../variables.dart';
 
 class SearchField extends StatelessWidget {
   const SearchField({
@@ -16,7 +15,7 @@ class SearchField extends StatelessWidget {
       width: SizeConfig.screenWidth * 0.6,
       decoration: BoxDecoration(
         color: kSecondaryColor.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: TextField(
         controller: searchController,

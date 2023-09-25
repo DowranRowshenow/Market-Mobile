@@ -14,12 +14,8 @@ class PopularProducts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: SectionTitle(title: "Popular Products", press: () {}),
-        ),
-        SizedBox(height: getProportionateScreenWidth(20)),
+        SectionTitle(title: "Popular Products", press: () {}),
+        SizedBox(height: getProportionateScreenWidth(10)),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: FutureBuilder<List<Product>>(
@@ -27,7 +23,6 @@ class PopularProducts extends StatelessWidget {
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 var products = snapshot.data as List<Product>;
-                print(products);
                 return Row(
                   children: [
                     ...List.generate(
@@ -39,7 +34,7 @@ class PopularProducts extends StatelessWidget {
                         return const SizedBox.shrink();
                       },
                     ),
-                    SizedBox(width: getProportionateScreenWidth(20)),
+                    SizedBox(width: getProportionateScreenWidth(15)),
                   ],
                 );
               } else {
