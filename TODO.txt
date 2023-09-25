@@ -1,0 +1,40 @@
+SCREEN
+*Home Screen Silver Appbar
+*Search Screen with HeroWidget
+*Products Screen
+*Categories Screen
+*Brands Screen
+*Favorites Screen
+*Splash Loading Animation Screen
+*New Profile Screen
+*Other Profile Releated Screens
+
+WIDGETS
+*Skeleton Widget 
+*Ads Banner Animated
+
+SETTINGS
+*Dark Mode
+*Translations
+*Notifications
+*Help Info
+*Log Out
+
+OTHER
+*Home Screen On Back Click Exit Dialogue
+*Bottombar replace Chat with Cart
+*Filter Options Drawer
+
+BUTTONS
+*Favorite Button
+
+INTERNET
+*Connection require
+
+
+// OUTDATED
+
+FIREBASE
+*Push Notifications
+*Remove Robot Check
+*Rename "market-4c7fc.firebase.com" with %AppName% (Probably need to create new project)

@@ -10,8 +10,8 @@
 .svn/
 migrate_working_dir/
 .vscode/
-DAY LOG.txt
-TODO.txt
+#DAY LOG.txt
+#TODO.txt
 
 # IntelliJ related
 *.iml

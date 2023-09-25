@@ -1,0 +1,20 @@
+DAY LOG (~10 May)
+1. SMS backend service for OTP verification (Twilio) [FAILURE]
+2. Starter Template (Splash Screen, Design, Register, Profile... etc)
+3. Splash, Register, OTP screens
+4. Firebase setup 
+5. Backend setup
+6. Firebase auth fix [FAILURE]
+7. Backend setup (New)
+8. Register [FAILURE]
+BREAKING FOR A LONG TIME (~18 May)
+
+RESTARTING (18 July)
+1. Create and setup Django and Git Project
+2. Create Products App and filtering queries
+3. Create and setup Flutter and Git Project
+4. Write code for fetching data from server
+5. ...
+6. Fix Some Issues in Both End (Release.apk)
+7. Create Search Screen and Function
+BREAKING FOR A LONG TIME (25 July)
